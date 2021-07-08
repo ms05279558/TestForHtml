@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <title>score</title>
+</head>
+<body> 
+    <img id="img1" class="i" src="images/star.gif" />
+    <img id="img2" class="i" src="images/star.gif" />
+    <img id="img3" class="i" src="images/star.gif" />
+    <img id="img4" class="i" src="images/star.gif" />
+    <img id="img5" class="i" src="images/star.gif" />
+    <div id="d1"></div>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+       
+        $("#img1").mouseenter(function(){
+           $(this).prop("src","images/chngstar.gif")
+           $("#d1").html("評分中..1")                              
+       });            
+       $("#img1").mouseleave(function(){  
+           $(this).prop("src","images/star.gif")
+           $("#d1").html(" ")                                                            
+       });      
+       $("#img1").click(function(){      
+           $("#d1").html("一顆星")
+           $("img").off("mouseenter mouseleave click")                             
+       });
+       
+
+       $("#img2").mouseenter(function(){
+           $(this).prop("src","images/chngstar.gif")
+           $("#img1").prop("src","images/chngstar.gif")
+           $("#d1").html("評分中..2")          
+       });            
+       $("#img2").mouseleave(function(){  
+           $(this).prop("src","images/star.gif")
+           $("#img1").prop("src","images/star.gif")
+           $("#d1").html(" ")                                                            
+       });
+       $("#img2").click(function(){      
+           $("#d1").html("二顆星")
+           $("img").off("mouseenter mouseleave click")                                
+       });
+       $("#img3").mouseenter(function(){
+           $(this).prop("src","images/chngstar.gif")
+           $("#img2,#img1").prop("src","images/chngstar.gif")                
+           $("#d1").html("評分中..3")         
+       });            
+       $("#img3").mouseleave(function(){  
+           $(this).prop("src","images/star.gif")
+           $("#img2,#img1").prop("src","images/star.gif")           
+           $("#d1").html(" ")                                                            
+       });
+       $("#img3").click(function(){      
+           $("#d1").html("三顆星")
+           $("img").off("mouseenter mouseleave click")                                     
+       });
+       $("#img4").mouseenter(function(){
+           $(this).prop("src","images/chngstar.gif")
+           $("#img3,#img2,#img1").prop("src","images/chngstar.gif")
+           $("#d1").html("評分中..4")            
+       });            
+       $("#img4").mouseleave(function(){  
+           $(this).prop("src","images/star.gif")
+           $("#img3,#img2,#img1").prop("src","images/star.gif")
+           $("#d1").html("")                                                            
+       });
+       $("#img4").click(function(){      
+           $("#d1").html("四顆星")
+           $("img").off("mouseenter mouseleave click")                                
+       });
+       $("#img5").mouseenter(function(){
+           $(this).prop("src","images/chngstar.gif")
+           $("#img4,#img3,#img2,#img1").prop("src","images/chngstar.gif")    
+           $("#d1").html("評分中..5")              
+       });            
+       $("#img5").mouseleave(function(){  
+           $(this).prop("src","images/star.gif")
+           $("#img4,#img3,#img2,#img1").prop("src","images/star.gif")
+           $("#d1").html("")                                                            
+       });      
+       $("#img5").click(function(){      
+           $("#d1").html("五顆星")
+           $("img").off("mouseenter mouseleave click")                                                
+       });
+       
+        
+   
+       
+       
+       
+       
+       
+  
+
+ </script> 
+   
+</body>
+</html>
